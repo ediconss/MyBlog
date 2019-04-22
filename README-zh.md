@@ -6,7 +6,7 @@
 
 > 后端使用SpringBoot
 >
-> [后端地址]: https://github.com/ediconss/MyBolg_parent.git
+> [后端地址] https://github.com/ediconss/MyBolg_parent.git
 >
 > 
 ## Build Setup
