@@ -3,6 +3,7 @@
 > A minimal Bolg with Element UI & axios & iconfont & permission control & lint
 
 
+[后端地址] https://github.com/ediconss/MyBolg_parent.git
 
 ## Build Setup
 
