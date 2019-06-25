@@ -3,12 +3,13 @@
 > A minimal Bolg with Element UI & axios & iconfont & permission control & lint
 
 
+[后端地址] https://github.com/ediconss/MyBlog_parent.git
 
 ## Build Setup
 
 ```bash
 # Clone project
-git clone https://github.com/ediconss/MyBolg.git
+git clone https://github.com/ediconss/MyBlog.git
 
 # Install dependencies
 npm install
