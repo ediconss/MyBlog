@@ -71,7 +71,7 @@
       width="100">
       <template slot-scope="scope">
         
-         <router-link tag="a" :to="'/form/index?id='+scope.row.id">修改</router-link>
+         <router-link tag="a" :to="'/admin/form/index?id='+scope.row.id">修改</router-link>
       <a @click="handleDelete(scope.row.id)" >删除</a>
       </template>
     </el-table-column>

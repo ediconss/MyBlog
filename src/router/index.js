@@ -8,7 +8,7 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '../views/layout/Layout'
-
+import userLayout from '../user/layout/userLayout'
 /**
 * hidden: true                   if `hidden:true` will not show in the sidebar(default is false)
 * alwaysShow: true               if set true, will always show the root menu, whatever its child routes length
@@ -26,10 +26,52 @@ export const constantRouterMap = [
   { path: '/login', component: () => import('@/views/login/index'), hidden: true },
   { path: '/404', component: () => import('@/views/404'), hidden: true },
 
+
+
   {
     path: '/',
+    component: userLayout,
+    redirect: '/',
+    hidden: true,
+    children: [{
+      path: '/',
+      component: () => import('@/user/main/')
+    },
+    {
+      path: '/article/:year',
+      component: () => import('@/user/year')
+    },
+    {
+      path: '/article/:year/:month',
+      component: () => import('@/user/year')
+    },
+    {
+      path: '/article/:year/:month/:day',
+      component: () => import('@/user/year')
+    },
+    {
+      path: '/article/:year/:month/:day/:item',
+      component: () => import('@/user/article')
+    },
+    {
+      path: '/topic',
+      component: () => import('@/user/topic')
+    },
+    {
+      path: '/search',
+      component: () => import('@/user/search')
+    },
+    {
+      path: '/test',
+      component: () => import('@/user/testL')
+    }
+    
+  ]
+  },
+  {
+    path: '/admin',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/admin/dashboard',
     name: 'Dashboard',
     hidden: true,
     children: [{
@@ -38,7 +80,7 @@ export const constantRouterMap = [
     }]
   },
   {
-    path: '/base',
+    path: '/admin/base',
     component: Layout,
     name: 'Example',
     meta: { title: '基础管理', icon: 'example' },
@@ -48,8 +90,9 @@ export const constantRouterMap = [
       { path: 'topic', name: 'topic', component: () => import('@/views/table/topic'), meta: { title: 'topic', icon: 'table' }}
     ]
   },
+
   {
-    path: '/form',
+    path: '/admin/form',
     component: Layout,
     children: [
       {
@@ -70,7 +113,7 @@ export const constantRouterMap = [
 ]
 
 export default new Router({
-  // mode: 'history', //后端支持可开
+   mode: 'history', //后端支持可开
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })

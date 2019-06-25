@@ -1,0 +1,101 @@
+.pagenav a {
+    /* text-decoration:none; */
+   
+     padding: .5em;
+     font-weight: bold
+ }
+ .pagenav>* {
+     margin: 0 .2em;
+ }
+ 
+ [class^="icon-"], [class*=" icon-"] {
+     font-family: 'icomoon' !important;
+     speak: none;
+     font-style: normal;
+     font-weight: normal;
+     font-variant: normal;
+     text-transform: none;
+     line-height: 1;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+ }
+ .pagenav {
+     border-top: 1px solid #ebebeb;
+     text-align: center;
+     padding: 60px 0;
+     margin: 0 30px;
+     color: #aaa;
+ }
+ @media (min-width: 1000px) {
+    .grid-item {
+        margin-top: 60px;
+        padding: 0 15px;
+        width: 25%;
+        display: inline-block;
+        vertical-align: top;
+    }  
+ }
+ @media (min-width: 760px) and (max-width: 999px){
+    .grid-item {
+        margin-top: 60px;
+        padding: 0 15px;
+        width: 33%;
+        display: inline-block;
+        vertical-align: top;
+    }  
+}
+@media (min-width: 500px) and (max-width: 760px) {
+    .grid-item {
+        margin-top: 60px;
+        padding: 0 15px;
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+    }  
+}
+@media (max-width: 500px) {
+    .grid-item {
+        margin-top: 30px;
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+ .grid-item .entry-meta {
+     height: 20;
+     margin-bottom: 3px;
+     font-size: 12px;
+     font-weight: bold;
+ 
+ }
+ .test{
+     margin: 20px;
+ }
+ .entry-grid {
+     clear: both;
+     /* margin-top: -60px;
+     margin-left: -15px;
+     margin-right: -15px; */
+ }
+ .panel {
+     clear: both;
+     background: #fff;
+ }
+ .l-section {
+     margin-bottom: 30px;
+     clear: both;
+ }
+ #page-header {
+     margin-top: 40px;
+     margin-bottom: 60px;
+ }
+ #page-header .page-title {
+     font-size: 54px;
+     font-weight: bold;
+     line-height: 1;
+     text-align: center;
+     margin: 0 0 .7em;
+ }
+
+ 

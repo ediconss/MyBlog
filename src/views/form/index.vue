@@ -126,6 +126,7 @@ export default {
           }
           },
       id: "",
+      imgState:0,
       imageUrl: "",
       pojo: {},
       label: {},
@@ -160,6 +161,7 @@ export default {
       var reader = new FileReader();
       reader.readAsDataURL(event.target.files[0]);
       this.imageUrl = "test";
+      this.imgState=1
       reader.onload = function() {
         document.getElementById("img").src = reader.result;
       };
@@ -212,8 +214,11 @@ export default {
       });
     },
     save() {
+      if(this.imgState==1){
       var imgurl = document.getElementById("img").src;
       this.pojo.cover = imgurl;
+      }
+     
       if (this.pojo.title == undefined || this.pojo.summary == undefined) {
         return false;
       }
